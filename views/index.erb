@@ -1,5 +1,8 @@
 <h1>Welcome to our message app!</h1>
-<form>
+<form action="/temp" method="post">
 <input type="text" placeholder="type message here" name="message">
 <input type="submit" value="Submit">
 </form>
+
+<h1>Messages</h1>
+<%= @message %>

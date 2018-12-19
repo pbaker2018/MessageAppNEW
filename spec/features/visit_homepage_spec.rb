@@ -4,9 +4,10 @@ feature 'homepage' do
     expect(page).to have_content('Welcome to our message app!')
   end
 
-  scenario 'will display a form' do
+  scenario 'user message will display on homepage after submission' do
     visit '/'
-    expect(page).to have_field("message")
+    fill_in :message, with: 'Our first message!'
     click_button "Submit"
+    expect(page).to have_content('Our first message!')
   end
 end
