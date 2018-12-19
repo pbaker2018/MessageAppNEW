@@ -1,7 +1,6 @@
-
 feature 'homepage' do
-  scenario 'will take user to homepage' do
+  scenario 'will display a header' do
     visit '/'
-    expect(page).to have_content("Hello")
+    expect(page).to have_content('Welcome to our message app!')
   end
 end
