@@ -5,4 +5,4 @@
 </form>
 
 <h1>Messages</h1>
-<%= @message %>
+<%= @message.show unless @message.nil? %> <%= @message.timestamp unless @message.nil? %>
