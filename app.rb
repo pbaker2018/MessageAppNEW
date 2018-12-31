@@ -1,21 +1,18 @@
 require 'sinatra/base'
 require './lib/message'
+require 'sinatra/activerecord'
 
 class MessageApp < Sinatra::Base
-
-  set :sessions, true
+  register Sinatra::ActiveRecordExtension
 
   get '/' do
-    if session[:messages].nil?
-      session[:messages] = []
-    end
-    @messages = session[:messages]
+    @messages = Message.all
     erb :index
   end
 
   post '/temp' do
-    message = Message.new(params[:message])
-    session[:messages] << message
+    Message.create(content: params[:message]) # content is the column in the table it will be assigned to
+     # params[:message] is the text submitted in the form
     redirect '/'
   end
 

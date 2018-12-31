@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+    <body>
 <h1>Welcome to our message app!</h1>
 <form action="/temp" method="post">
 <input type="text" placeholder="type message here" name="message">
@@ -7,6 +12,10 @@
 <h1>Messages</h1>
 <% @messages.reverse.each do |message| %>
   <div>
-    <%=  message.show %> | <%= message.timestamp %>
+    <%=  message.content %> <br/>
+    <%=  message.created_at %> <br/>
+    <br/>
   </div>
 <% end %>
+   </body>
+</html>
