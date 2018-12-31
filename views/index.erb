@@ -5,4 +5,8 @@
 </form>
 
 <h1>Messages</h1>
-<%= @message.show unless @message.nil? %> <%= @message.timestamp unless @message.nil? %>
+<% @messages.reverse.each do |message| %>
+  <div>
+    <%=  message.show %> | <%= message.timestamp %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@ RSpec.describe Message do
   end
 
   describe '#timestamp' do
-    it 'displays timestamp that user submitted message' do
+    it 'displays time that user submitted message' do
       expect(message.timestamp).to eq Time.now.strftime("%d-%m-%Y %H:%M:%S")
     end
 end

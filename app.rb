@@ -3,15 +3,19 @@ require './lib/message'
 
 class MessageApp < Sinatra::Base
 
-  enable :sessions
+  set :sessions, true
 
   get '/' do
-   @message = session[:message]
-   erb :index
+    if session[:messages].nil?
+      session[:messages] = []
+    end
+    @messages = session[:messages]
+    erb :index
   end
 
   post '/temp' do
-    p session[:message] = Message.new(params[:message])
+    message = Message.new(params[:message])
+    session[:messages] << message
     redirect '/'
   end
 
