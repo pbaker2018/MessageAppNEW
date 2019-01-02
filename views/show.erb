@@ -1,7 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+    body {
+      font-family: sans-serif;
+      background-color: #d1dffa;
+    }
+
+    h1 {
+      color: white;
+      background-color: #cc66ff;
+    }
+
+    h2 {
+      color: white;
+      background-color: #cc66ff;
+    }
+
+    input[type=text] {
+    background-color: white;
+    color: black;
+    }
+  </style>
+  </head>
+    <body>
+      <div align="center">
+<h1>Your selected message</h1>
+    <br/>
 <p><%= @message.content %></p>
-<a href="/delete/<%= @message.id %>"> Delete Message </a>
-
-
-
-
+<a href="/delete/<%= @message.id %>"> Delete Message </a><br/>
+<br/>
 <a href="/">Homepage</a>
+</body>
+</html>
