@@ -48,8 +48,8 @@ input[type=submit]:hover {
 <h2>Messages</h2>
 <% @messages.reverse.each do |message| %>
   <div>
-    <%=  message.created_at %> <br/>
-    <%=  message.content %> <br/>
+    <%=  message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> <br/>
+    <%=  message.content.truncate(20) %> <br/>
     <br/>
   </div>
 <% end %>
