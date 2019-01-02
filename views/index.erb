@@ -39,17 +39,19 @@ input[type=submit]:hover {
   </head>
     <body>
       <div align="center">
-<h1>Welcome to our message app!</h1>
+<h1>Welcome to my message app!</h1>
 <form action="/temp" method="post">
 <input type="text" placeholder="type message here" name="message">
+<input type="text" placeholder="type your name here" name="name">
 <input type="submit" value="Submit">
 </form>
 
 <h2>Messages</h2>
 <% @messages.reverse.each do |message| %>
   <div>
-    <%=  message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> <br/>
-    <%=  message.content.truncate(20) %> <br/>
+    <%= message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> <br/>
+    <a href="/messages/<%= message.id %>"> <%= message.content.truncate(20) %> </a> <br/>
+    <%= message.name %> <br/>
     <br/>
   </div>
 <% end %>

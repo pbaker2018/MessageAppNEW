@@ -10,12 +10,20 @@ class MessageApp < Sinatra::Base
     erb :index
   end
 
-  post '/temp' do
-    Message.create(content: params[:message]) # content is the column in the table it will be assigned to
-     # params[:message] is the text submitted in the form
+  get '/messages/:message_id' do
+    @message = Message.find(params[:message_id])
+    erb :show
+  end
+
+  get '/delete/:message_id' do
+    Message.destroy(params[:message_id])
     redirect '/'
   end
 
-run! if app_file == $0
+  post '/temp' do
+    Message.create(content: params[:message], name: params[:name])
+    redirect '/'
+  end
 
+  run! if app_file == $PROGRAM_NAME
 end
