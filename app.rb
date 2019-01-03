@@ -10,7 +10,7 @@ class MessageApp < Sinatra::Base
     erb :index
   end
 
-  get '/messages/:message_id' do
+  get '/message/:message_id' do
     @message = Message.find(params[:message_id])
     erb :show
   end
@@ -18,6 +18,18 @@ class MessageApp < Sinatra::Base
   get '/delete/:message_id' do
     Message.destroy(params[:message_id])
     redirect '/'
+  end
+
+  get '/edit/:message_id' do
+    @message = Message.find(params[:message_id])
+    erb :edit
+  end
+
+  post '/temp_edit/:message_id' do
+	  @message = Message.find(params[:message_id])
+	  @message.update(content: params[:message], name: params[:name])
+	  @message.save
+	  redirect '/'
   end
 
   post '/temp' do

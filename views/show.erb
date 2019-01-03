@@ -27,8 +27,10 @@
       <div align="center">
 <h1>Your selected message</h1>
     <br/>
-<p><%= @message.content %></p>
+<h3>This is your message: "<%= @message.content %>"</h3>
 <a href="/delete/<%= @message.id %>"> Delete Message </a><br/>
+<br/>
+<a href="/edit/<%= @message.id %>"> Edit Message </a><br/>
 <br/>
 <a href="/">Homepage</a>
 </body>

@@ -39,24 +39,19 @@ input[type=submit]:hover {
   </head>
     <body>
       <div align="center">
-<h1>Welcome to Pauline's message app!</h1>
-<form action="/temp" method="post">
-<input type="text" placeholder="type message here" size="100" name="message"><br/>
+<h1>Please edit your message</h1>
 <br/>
-<input type="text" placeholder="type your name here" size="35" name="name"><br/>
+<h3>This is your message: "<%= @message.content %>"</h3>
 <br/>
-<input type="submit" value="Submit">
+<form action="/temp_edit/<%= @message.id %>" method="post">
+<input type="text" placeholder="edit your message here" size="100" height="400px" name="message"><br/>
+<br/>
+<input type="text" placeholder="edit your name here" size="30" name="name"><br/>
+<br/>
+<input type="submit" value="Update message">
 </form>
-
-<h2>Messages</h2>
-<% @messages.reverse.each do |message| %>
-  <div>
-    <%= message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> <br/>
-    <a href="/message/<%= message.id %>"> <%= message.content.truncate(20) %> </a> <br/>
-    <%= message.name %> <br/>
-    <br/>
-  </div>
-<% end %>
-</div>
+<br/>
+<a href="/">Homepage</a>
+      </div>
    </body>
 </html>
