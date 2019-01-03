@@ -41,7 +41,7 @@ input[type=submit]:hover {
       <div align="center">
 <h1>Please edit your message</h1>
 <br/>
-<h3>This is your message: "<%= @message.content %>"</h3>
+<p><b><i>This is your message: "</i></b><%= @message.content %>"</p>
 <br/>
 <form action="/temp_edit/<%= @message.id %>" method="post">
 <input type="text" placeholder="edit your message here" size="100" height="400px" name="message"><br/>
