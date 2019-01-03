@@ -26,10 +26,10 @@ class MessageApp < Sinatra::Base
   end
 
   post '/temp_edit/:message_id' do
-	  @message = Message.find(params[:message_id])
-	  @message.update(content: params[:message], name: params[:name])
-	  @message.save
-	  redirect '/'
+    @message = Message.find(params[:message_id])
+    @message.update(content: params[:message], name: params[:name])
+    @message.save
+    redirect '/'
   end
 
   post '/temp' do
