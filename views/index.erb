@@ -51,9 +51,9 @@ input[type=submit]:hover {
 <h2>Messages</h2>
 <% @messages.reverse.each do |message| %>
   <div>
-    <p>Created: <%= message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | Updated: <%= message.updated_at.strftime("%d-%m-%Y %H:%M:%S") %></p>
+    <p><b>Created:</b> <%= message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | <b>Updated:</b> <%= message.updated_at.strftime("%d-%m-%Y %H:%M:%S") %><br/>
     <a href="/message/<%= message.id %>"> <%= message.content.truncate(20) %> </a> <br/>
-    <%= message.name %> <br/>
+    <b>Authored by:</b> <%= message.name %> </p>
     <br/>
   </div>
 <% end %>
