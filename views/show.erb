@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style type="text/css">
-    body {
-      font-family: sans-serif;
-      background-color: #d1dffa;
-    }
-
-    h1 {
-      color: white;
-      background-color: #cc66ff;
-    }
-
-    h2 {
-      color: white;
-      background-color: #cc66ff;
-    }
-
-    input[type=text] {
-    background-color: white;
-    color: black;
-    }
-  </style>
-  </head>
-    <body>
-      <div align="center">
-<h1>Your selected message</h1>
+<head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
+</head>
+<body>
+  <div align="center">
+    <h1>Your selected message</h1>
     <br/>
-<p><b><i>This is your message:</i></b> "<%= @message.content %>"</p><br/>
-<br/>
-<a href="/delete/<%= @message.id %>"> Delete Message </a><br/>
-<br/>
-<a href="/edit/<%= @message.id %>"> Edit Message </a><br/>
-<br/>
-<a href="/">Homepage</a>
-</body>
-</html>
+    <p><b><i>This is your message:</i></b> "<%= @message.content %>"</p><br/>
+    <%= erb(:deletebutton, :locals => { :object => @message.id }) %> <br/>
+    <br/>
+    <%= erb(:updatebutton) %> <br/>
+    <br/>
+    <%= erb(:homepagebutton) %>
+  </body>
+  </html>

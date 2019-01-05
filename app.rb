@@ -14,8 +14,8 @@ class MessageApp < Sinatra::Base
     @message = Message.find(params[:message_id])
     erb :show
   end
-
-  get '/delete/:message_id' do
+  
+  post '/delete/:message_id' do
     Message.destroy(params[:message_id])
     redirect '/'
   end

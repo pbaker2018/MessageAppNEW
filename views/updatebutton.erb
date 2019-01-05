@@ -1,0 +1,9 @@
+<!-- partials -->
+<div class="buttons">
+
+  <form action="/edit/<%= @message.id %>" method="get">
+    <input type='hidden' name='_method' value='PATCH'/>
+    <input type="submit" value="Edit Message"/>
+  </form>
+
+</div>

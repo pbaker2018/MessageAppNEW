@@ -1,0 +1,36 @@
+input[type=submit] {
+background-color: mediumaquamarine;
+color: black;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.buttons {
+display: inline;
+}
+
+input[type=submit]:hover {
+background-color: mediumseagreen;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #d1dffa;
+}
+
+h1 {
+  color: white;
+  background-color: #cc66ff;
+}
+
+h2 {
+  color: white;
+  background-color: #cc66ff;
+}
+
+input[type=text] {
+background-color: white;
+color: black;
+}
