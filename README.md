@@ -24,13 +24,13 @@ The aim is to help us to:
 
 ## How to use it
 
-Installation
 To install:
-
+```
 $ git clone https://github.com/pbaker2018/MessageAppNEW
 $ cd MessageAppNEW
 $ bundle install
 $ rackup
+```
 
 To load the database:
 
