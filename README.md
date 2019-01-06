@@ -14,6 +14,13 @@ Additionally, the user can:
 All messages are stored in a database
 
 
+## Youtube link to screen recording
+The following link shows my MessageApp in action
+```
+https://youtu.be/XFgy929iCsU
+```
+
+
 ## Goals
 This is a challenge given by Maker's Academy, during week 4.
 The aim is to help us to:
