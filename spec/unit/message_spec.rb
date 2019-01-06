@@ -28,7 +28,7 @@ RSpec.describe Message do
 
   describe '#name' do
     it 'displays the name the user submitted' do
-      expect(message.name).to eq 'Viv'
+      expect(message.name).to eq 'Viv' 
     end
   end
 end
