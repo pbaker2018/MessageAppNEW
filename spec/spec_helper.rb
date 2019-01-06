@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 ENV['RACK_ENV'] = 'test'
 require 'capybara'
 require 'rubocop'

@@ -5,13 +5,13 @@
 </head>
 <body>
   <div align="center">
-    <h1>Welcome to Pauline's message app!</h1>
-    <%= erb(:textbox, :locals => { :object => "temp", :content => nil}) %> <br/>
+    <h1>Welcome to your Message App! 💌 </h1>
+    <%= erb(:textbox, :locals => { :object => "temp", :content => nil }) %> <br/>
     <h2>Messages</h2>
     <% @messages.reverse.each do |message| %>
     <div>
       <p><b>Created:</b> <%= message.created_at.strftime("%d-%m-%Y %H:%M:%S") %> | <b>Updated:</b> <%= message.updated_at.strftime("%d-%m-%Y %H:%M:%S") %><br/>
-        <a href="/message/<%= message.id %>"> <%= message.content.truncate(20) %> </a> <br/>
+        <a href="/message/<%= message.id %>"> <%= message.content[0, 20] %> </a> <br/>
         <b>Authored by:</b> <%= message.name %> </p>
       </div>
       <%= erb(:deletebutton, :locals => { :object => message.id }) %><br/>

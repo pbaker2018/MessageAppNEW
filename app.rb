@@ -14,7 +14,7 @@ class MessageApp < Sinatra::Base
     @message = Message.find(params[:message_id])
     erb :show
   end
-  
+
   post '/delete/:message_id' do
     Message.destroy(params[:message_id])
     redirect '/'
@@ -28,7 +28,6 @@ class MessageApp < Sinatra::Base
   post '/temp_edit/:message_id' do
     @message = Message.find(params[:message_id])
     @message.update(content: params[:message], name: params[:name])
-    @message.save
     redirect '/'
   end
 

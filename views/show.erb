@@ -7,7 +7,7 @@
   <div align="center">
     <h1>Your selected message</h1>
     <br/>
-    <p><b><i>This is your message:</i></b> "<%= @message.content %>"</p><br/>
+    <p><b><i>This is your message:</i></b> "<%=@message.content %>"</p><br/>
     <%= erb(:deletebutton, :locals => { :object => @message.id }) %> <br/>
     <br/>
     <%= erb(:updatebutton) %> <br/>
