@@ -20,6 +20,10 @@ The following link shows my MessageApp in action
 https://youtu.be/XFgy929iCsU
 ```
 
+## Link to my app hosted on Heroku
+```
+https://thawing-ocean-12763.herokuapp.com/
+```
 
 ## Goals
 This is a challenge given by Maker's Academy, during week 4.
