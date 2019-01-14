@@ -4,7 +4,7 @@ require 'sinatra/activerecord'
 
 class MessageApp < Sinatra::Base
   register Sinatra::ActiveRecordExtension
-
+  ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
   get '/' do
     @messages = Message.all
     erb :index
