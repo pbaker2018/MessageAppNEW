@@ -21,6 +21,8 @@ https://youtu.be/XFgy929iCsU
 ```
 
 ## Link to my app hosted on Heroku
+Here, you can use the app yourself to post messages!
+Try it! (Please keep your posts clean! ;)
 ```
 https://thawing-ocean-12763.herokuapp.com/
 ```
