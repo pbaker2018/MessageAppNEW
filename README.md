@@ -28,13 +28,6 @@ Try it, but please keep your posts clean! ;)
 https://thawing-ocean-12763.herokuapp.com/
 ```
 
-## Goals
-This is a challenge given by Maker's Academy, during week 4.
-The aim is to help us to:
-- Model anything
-- TDD anything
-- Learn how to do anything
-
 
 ## How to use it
 
